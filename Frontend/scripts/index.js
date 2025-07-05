@@ -15,7 +15,7 @@ function afficherResultat(score, nbMotsProposes) {
   // Ecriture du texte
   let affichageScore = `${score} / ${nbMotsProposes}`;
   // On affiche le score
-  spanScore.innerText(affichageScore);
+  spanScore.innerText = affichageScore;
 }
 
 function afficherProposition(proposition) {
@@ -57,7 +57,7 @@ function lancerJeu() {
 
   // Gestion de l'événement change sur les boutons radio
   let listeBtnRadio = document.querySelectorAll(".optionSource input");
-  for (let index = 0; index < listeProposition.length; index++) {
+  for (let index = 0; index < listeBtnRadio.length; index++) {
     listeBtnRadio[index].addEventListener("change", (event) => {
       // Si c'est le premier élément qui a été modifié, alors nous voulons
       // jouer avec la listeMots.
