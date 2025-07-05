@@ -33,10 +33,13 @@ function lancerJeu() {
   let i = 0;
   let listeProposition = listeMots;
 
-  // Gestion de lévénement click sur le bouton "valider"
+  
   let btnValiderMot = document.getElementById("btnValiderMot");
   let inputEcriture = document.getElementById("inputEcriture");
-  afficherProposition(listeMots[i]);
+
+  afficherProposition(listeProposition[i]);
+
+  // Gestion de lévénement click sur le bouton "valider"
   btnValiderMot.addEventListener("click", () => {
     if (inputEcriture.value === listeProposition[i]) {
       score++;
