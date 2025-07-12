@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Application Web AzerType</title>
     <!-- Inclusion du fichier css pour le style du jeu -->
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style.css" />
     <!-- Inclusion des 3 scripts nécessaires pour faire fonctionner le jeu -->
     <!-- Attention, l'ordre des fichiers js est important.  -->
     <script src="scripts/config.js" defer></script>
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/popup.js" defer></script>
+    <script src="scripts/script.js" defer></script>
     <script src="scripts/main.js" defer></script>
   </head>
   <body>
@@ -47,11 +48,32 @@
 
       <div class="zoneScore">Votre score : <span>0</span></div>
 
+      <!-- Bouton partager le résultat ou le score -->
+      <div class="zonePartage">
+        <button>Partager</button>
+      </div>
     </main>
 
     <!-- Pied de page -->
-    <footer>
-      @Copyright : OpenClassrooms.
-    </footer>
+    <footer>@Copyright : OpenClassrooms.</footer>
+
+    <!-- Popup de partage -->
+    <div class="popupBackground">
+      <div class="popup">
+        <div>Partagez votre score</div>
+        <form novalidate>
+          <label for="nom">Votre nom</label>
+          <input type="text" id="nom" name="nom" placeholder="Votre nom" />
+          <label for="email">Avec qui voulez-vous partager votre score ?</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="nom@domaine.com"
+          />
+          <button id="btnEnvoyerMail">Envoyer</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
